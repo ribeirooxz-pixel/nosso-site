@@ -1,47 +1,33 @@
-/* Cor de fundo do site */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-
-  /* ✏️ MUDE A COR PRINCIPAL AQUI */
   background: #1d1d1d;
-
   color: #dfdcdc;
   text-align: center;
 }
 
-/* Área central do conteúdo */
 .container {
   padding: 30px 20px;
   max-width: 700px;
   margin: auto;
 }
 
-/* Título principal */
 h1 {
-  /* ✏️ COR DO TÍTULO */
   color: #e6b800;
-
   font-size: 2.5em;
   margin-bottom: 10px;
 }
 
-/* Cartões brancos */
 .card {
   background: rgb(92, 91, 91);
   border-radius: 14px;
   padding: 20px;
   margin: 20px 0;
-
-  /* Sombra suave */
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
-/* Botão */
 button {
-  /* ✏️ COR DO BOTÃO */
   background: #ffd633;
-
   border: none;
   padding: 12px 22px;
   border-radius: 10px;
@@ -50,39 +36,29 @@ button {
   transition: 0.3s;
 }
 
-/* Efeito ao passar o mouse */
 button:hover {
   transform: scale(1.05);
-
-  /* ✏️ COR AO PASSAR O MOUSE */
   background: #ffcc00;
 }
 
-/* Grade da galeria */
 .gallery {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
 
-/* Imagens da galeria */
 .gallery img {
   width: 100%;
   border-radius: 10px;
-
-  /* 💛 BORDA AMARELA */
   border: 2px solid #ffce0b;
-
   cursor: pointer;
   transition: 0.3s;
 }
 
-/* Zoom ao passar o mouse */
 .gallery img:hover {
   transform: scale(1.05);
 }
 
-/* Fundo escuro do modal */
 .modal {
   display: none;
   position: fixed;
@@ -91,15 +67,12 @@ button:hover {
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.8);
-  
   justify-content: center;
   align-items: center;
-
   padding: 20px;
   box-sizing: border-box;
 }
 
-/* Caixa interna */
 .modal-conteudo {
   display: flex;
   gap: 20px;
@@ -108,16 +81,14 @@ button:hover {
   width: 100%;
 }
 
-/* 💛 FOTO AJUSTADA NA TELA */
 #fotoGrande {
-  max-width: 60vw;   /* nunca passa de 60% da largura da tela */
-  max-height: 80vh;  /* nunca passa de 80% da altura da tela */
+  max-width: 60vw;
+  max-height: 80vh;
   width: auto;
   height: auto;
   border-radius: 12px;
 }
 
-/* Mensagem */
 .mensagem-foto {
   background: rgb(53, 53, 53);
   padding: 15px;
@@ -125,7 +96,6 @@ button:hover {
   max-width: 260px;
 }
 
-/* Botão de fechar */
 .fechar {
   position: absolute;
   top: 20px;
@@ -135,16 +105,14 @@ button:hover {
   cursor: pointer;
 }
 
-/* ✨ FUNDO BASE */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background-color: #000000;
-  position: relative; /* necessário para organizar camadas */
+  position: relative;
   z-index: 0;
 }
 
-/* ✨ CAMADA DE ESTRELAS ATRÁS DE TUDO */
 body::before {
   content: "";
   position: fixed;
@@ -152,22 +120,16 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-
   background-image:
     radial-gradient(rgb(240, 240, 240) 1px, transparent 1px),
     radial-gradient(#ffe066 1px, transparent 1px);
-
   background-size: 40px 40px, 60px 60px;
   background-position: 0 0, 20px 20px;
-
   opacity: 0.5;
-
-  /* 💛 ISSO RESOLVE O PROBLEMA */
-  z-index: -1;          /* manda para trás */
-  pointer-events: none; /* não bloqueia cliques */
+  z-index: -1;
+  pointer-events: none;
 }
 
-/* (opcional) animação suave */
 @keyframes piscar {
   from { opacity: 0.3; }
   to { opacity: 0.7; }
@@ -177,7 +139,6 @@ body::before {
   animation: piscar 4s infinite alternate;
 }
 
-/* Celular */
 @media (max-width: 700px) {
   .modal-conteudo {
     flex-direction: column;

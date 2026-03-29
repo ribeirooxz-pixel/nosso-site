@@ -1,48 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Define padrão de caracteres -->
   <meta charset="UTF-8">
-
-  <!-- Faz o site se adaptar ao celular -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Título que aparece na aba do navegador -->
   <title>Nosso site</title>
-
-  <!-- Conecta o arquivo de estilos -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- Container principal do site -->
 <div class="container">
 
-  <!-- Título principal -->
   <h1>Eu te amo💛</h1>
 
-  <!-- Texto inicial -->
   <div class="card">
     <p>
-      <!-- ✏️ EDITE ESTA MENSAGEM -->
       Ei cabeçuda, resolvi criar este site para lembrarmos sempre a quanto tempo estamos juntos, quero que saiba que a cada dia que passa eu te amo mais e fico cada vez mais orgulhoso de você e da mulher que vem se tornando. Estamos amadurecendo juntos e enfrentando cada momento de cabeça erguida, somos sortudos em termos uns aos outros.💛
     </p>
   </div>
 
-  <!-- Contador de tempo juntos -->
   <div class="card">
     <h2>Estamos juntos há</h2>
     <p id="contador"></p>
   </div>
 
-  <!-- Galeria de fotos -->
+  <div class="card">
+    <h2>Estamos namorando há</h2>
+    <p id="contadorNamoro"></p>
+  </div>
+
   <div class="card">
     <h2>Nossos Momentos</h2>
 
-    <!-- Grid de imagens -->
     <div class="gallery">
-      <!-- ✏️ TROQUE AS FOTOS -->
+
       <img src="img/alicep.jpg" 
       onclick="abrirFoto(this)"
       data-mensagem="A princesa mais linda do mundo."
@@ -92,19 +83,26 @@
       onclick="abrirFoto(this)"
       data-mensagem="Peço a Deus em oração que nos abençoe sempre e que nunca nos falte motivos para sorrir. Eu me preocupo muito contigo e não sei o que seria de mim sem você."
       data-musica="msc/sourei.mp3">
+
+      <img src="img/aliança.jpg" 
+      onclick="abrirFoto(this)"
+      data-mensagem="Essa aliança simboliza o nosso compromisso e o amor que sentimos um pelo outro"
+      data-musica="msc/anjoscantam.mp3">
+
+      <img src="img/aliança2.jpg" 
+      onclick="abrirFoto(this)"
+      data-mensagem="Eu te amo, bora casar? kkkkkkk"
+      data-musica="msc/lisboa.mp3">
     
     </div>
   </div>
 
-  <!-- Botão de mensagem surpresa -->
   <button onclick="mostrarMensagem()">
     Um recado pra você princesa
   </button>
 
-  <!-- Mensagem escondida -->
   <div id="surpresa" class="card fade" style="display:none;">
     <p>
-      <!-- ✏️ EDITE A MENSAGEM SECRETA -->
       Você é o melhor presente que papai do céu me deu, sem duvidas eu sou grato todos os dias por ele ter nos unido no momento em que eu mais precisava. Estava fora dos meus planos porém aconteceu, Deus sabe de todas as coisas e eu finalmente entendi o porque os planos de Dele são maiores que os meus, eu te amo muito e espero que esse contador continue aumentando cada vez mais. Jamais se esqueça de mim e do quanto EU TE AMO!
     </p>
   </div>
@@ -112,20 +110,16 @@
 </div>
 
 <div class="modal" id="modal">
-  
-  <!-- botão X -->
   <span class="fechar" onclick="fecharFoto()">✕</span>
 
   <div class="modal-conteudo">
-
     <img id="fotoGrande">
-
     <div id="mensagemFoto" class="mensagem-foto"></div>
-
   </div>
 </div>
 
 <audio id="playerFoto"></audio>
 <script src="script.js"></script>
+
 </body>
 </html>
